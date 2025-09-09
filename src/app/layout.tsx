@@ -8,8 +8,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased p-8 md:p-16">
-        <ThemeToggle />
+      <body className="antialiased p-8 md:px-16 h-screen">
+        {/* <ThemeToggle /> */}
         {children}
       </body>
     </html>
