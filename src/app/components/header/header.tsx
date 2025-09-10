@@ -3,11 +3,9 @@ import Links from "./components/Links";
 
 export default function Header() {
   return (
-    <header className="h-20">
+    <header className="h-20 flex justify-between items-center">
       <Logo />
-      <div className="flex justify-end items-center h-full">
-        <Links />
-      </div>
+      <Links />
     </header>
   );
 }
