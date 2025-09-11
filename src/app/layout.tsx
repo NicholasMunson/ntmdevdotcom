@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased p-8 md:px-16 h-screen">
+      <body className="antialiased flex-1">
         {/* <ThemeToggle /> */}
         {children}
       </body>

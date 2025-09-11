@@ -7,9 +7,9 @@ export default function Logo() {
       <Image
         src="/n.svg"
         alt="Logo"
-        width={190}
+        width={250}
         height={100}
-        className="hover:animate-spin transition-transform duration-300 mb-3"
+        className="hover:animate-spin transition-transform duration-100 mb-3 ml-[-40px]"
       />
     </div>
   );
