@@ -3,13 +3,13 @@ import { useParallax } from "../../hooks/useParallax";
 import { useTypingEffect } from "../../hooks/useTypingEffect";
 
 export default function Intro() {
-  const { transform } = useParallax({ speed: 0.5, direction: "up" });
+  const { transform } = useParallax({ speed: 0.2, direction: "down" });
   const texts = [
     "Hi, I'm Nicholas T Munson",
     "A Full-Stack JavaScript Developer",
     // "Problem Solver, Builder, and Leader",
-    "I build digital solutions that matter",
-    "Let's build something together!",
+    // "I build digital solutions that matter",
+    // "Let's build something together!",
   ];
   const { displayText } = useTypingEffect({
     texts,
@@ -20,7 +20,7 @@ export default function Intro() {
 
   return (
     <div
-      className="flex flex-col items-center justify-center h-50"
+      className="flex flex-col items-center justify-center h-[calc(100vh-8rem)]"
       style={{ transform }}
     >
       <h1 className="text-4xl font-bold">
