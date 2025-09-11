@@ -2,8 +2,15 @@
 import { useParallax } from "../../hooks/useParallax";
 import { useTypingEffect } from "../../hooks/useTypingEffect";
 
-export default function Intro() {
-  const { transform } = useParallax({ speed: 0.2, direction: "down" });
+interface IntroProps {
+  parallaxConfig: {
+    speed: number;
+    direction: "up" | "down";
+  };
+}
+
+export default function Intro({ parallaxConfig }: IntroProps) {
+  const { transform } = useParallax(parallaxConfig);
   const texts = [
     "Hi, I'm Nicholas T Munson",
     "A Full-Stack JavaScript Developer",
@@ -20,7 +27,7 @@ export default function Intro() {
 
   return (
     <div
-      className="flex flex-col items-center justify-center h-[calc(100vh-8rem)]"
+      className="flex flex-col items-center justify-center h-[calc(100vh-8rem)] bg-white"
       style={{ transform }}
     >
       <h1 className="text-4xl font-bold">
