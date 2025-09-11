@@ -1,6 +1,6 @@
 export default function Links() {
   return (
-    <div className="flex gap-4 flex-end mr-[17px]">
+    <div className="flex gap-4 flex-end md:mr-[17px]">
       <a
         className="hover:text-[#717171] hover:scale-150 transition-all duration-100 hover:duration-500"
         target="_blank"

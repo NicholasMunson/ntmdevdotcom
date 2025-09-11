@@ -6,10 +6,10 @@ export default function Intro() {
   const [isDeleting, setIsDeleting] = useState(false);
   const texts = [
     "Hi, I'm Nicholas T Munson",
-    "A Full-Stack JS Developer",
-    "Problem Solver,Builder,and Leader",
+    "A Full-Stack JavaScript Developer",
+    // "Problem Solver, Builder, and Leader",
     "I build digital solutions that matter",
-    "Let's Build Something Together!",
+    "Let's build something together!",
   ];
   const [textIndex, setTextIndex] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,7 +47,7 @@ export default function Intro() {
   }, [currentIndex, fullText, isDeleting, textIndex, texts.length]);
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center h-100">
+    <div className="flex flex-col items-center justify-center h-100">
       <h1 className="text-4xl font-bold">
         {displayText}
         <span className="animate-pulse">|</span>
