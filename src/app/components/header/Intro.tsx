@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useParallax } from "../../hooks/useParallax";
 
 export default function Intro() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const { transform } = useParallax({ speed: 0.5, direction: "down" });
   const texts = [
     "Hi, I'm Nicholas T Munson",
     "A Full-Stack JavaScript Developer",
@@ -47,7 +49,10 @@ export default function Intro() {
   }, [currentIndex, fullText, isDeleting, textIndex, texts.length]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-100">
+    <div
+      className="flex flex-col items-center justify-center h-50"
+      style={{ transform }}
+    >
       <h1 className="text-4xl font-bold">
         {displayText}
         <span className="animate-pulse">|</span>

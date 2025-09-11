@@ -6,9 +6,9 @@ export default function Header() {
   return (
     <header className="md:h-30 h-33 flex justify-between items-center bg-[#76a7bc] flex-col md:flex-row">
       <Logo />
-      <div className="hidden lg:flex">
+      {/* <div className="hidden lg:flex">
         <Intro />
-      </div>
+      </div> */}
       <Links />
     </header>
   );
