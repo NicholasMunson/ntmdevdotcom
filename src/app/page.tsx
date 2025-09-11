@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Header />
-      <div className="h-screen flex flex-col items-center justify-center">
+      {/* <div className="h-screen flex flex-col items-center justify-center"> */}
         <Intro />
         <IntroCopy />
-      </div>
+      {/* </div> */}
 
       {/* Add content to make page scrollable */}
       <div className="h-screen bg-gray-100 flex items-center justify-center">
