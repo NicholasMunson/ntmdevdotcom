@@ -11,8 +11,8 @@ interface ProjectsProps {
 export default function Projects({ parallaxConfig }: ProjectsProps) {
   const { transform } = useParallax(parallaxConfig);
   return (
-    <div style={{ transform }} className="h-screen bg-gray-200 flex items-center justify-center relative z-20 w-full">
-      <h1>Projectddds</h1>
+    <div style={{ transform }} className="h-screen bg-[#9be0c5] flex items-center justify-center relative z-20 w-full">
+      <h1 className="text-4xl font-bold">Projects</h1>
     </div>
   )
 }

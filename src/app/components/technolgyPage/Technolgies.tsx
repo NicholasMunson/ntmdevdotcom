@@ -13,7 +13,7 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
 
   return (
     <div
-      className="h-screen bg-gray-100 flex items-center justify-center relative z-20 w-full"
+      className="h-screen bg-[#d9f1e8] flex items-center justify-center relative z-20 w-full"
       style={{ transform }}
     >
       <h2 className="text-3xl">Technolgies</h2>

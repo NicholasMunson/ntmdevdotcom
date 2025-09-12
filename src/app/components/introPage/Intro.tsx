@@ -1,6 +1,7 @@
 "use client";
 import { useParallax } from "../../hooks/useParallax";
 import { useTypingEffect } from "../../hooks/useTypingEffect";
+import Image from "next/image";
 
 interface IntroProps {
   parallaxConfig: {
@@ -35,9 +36,18 @@ export default function Intro({ parallaxConfig }: IntroProps) {
         {displayText}
         <span className="animate-pulse">|</span>
       </h1>
-      <p className="text-lg text-gray-600 animate-bounce absolute bottom-8">
-        Please keep scrolling to see more
-      </p>
+      <div className="flex flex-col items-center absolute bottom-8">
+        <p className="text-lg text-gray-600 mb-2">
+          Please keep scrolling to see more
+        </p>
+        <Image
+          src="/arrow-down.svg"
+          alt="Scroll down"
+          width={50}
+          height={50}
+          className="animate-bounce"
+        />
+      </div>
     </div>
   );
 }

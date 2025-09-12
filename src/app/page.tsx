@@ -7,14 +7,13 @@ import Buffer from "./components/bufferPage/Buffer";
 
 // Parallax configuration
 const parallaxConfig = {
-  header: { speed: 0.5, direction: "up" as const },
   intro: { speed: 0.2, direction: "down" as const },
   // technologies: { speed: 0.3, direction: "down" as const },
-  technologies: { speed: 0.4, direction: "up" as const },
+  technologies: { speed: 0.2, direction: "up" as const },
   // projects: { speed: 0.4, direction: "up" as const },
-  projects: { speed: 0.6, direction: "up" as const },
-  buffer1: { speed: 0.3, direction: "down" as const },
-  buffer2: { speed: 0.3, direction: "down" as const },
+  projects: { speed: 0.2, direction: "up" as const },
+  buffer: { speed: 0.3, direction: "down" as const },
+
 };
 
 export default function Home() {
@@ -23,16 +22,25 @@ export default function Home() {
       <Header />
       <div className="pt-32 md:pt-30">
         <Intro parallaxConfig={parallaxConfig.intro} />
-        <Buffer parallaxConfig={parallaxConfig.buffer1} bgColor="bg-red-100" />
+        <Buffer
+          parallaxConfig={parallaxConfig.buffer}
+          bgColor="bg-neutral-400"
+        />
         <Technolgies parallaxConfig={parallaxConfig.technologies} />
         <Buffer
-          parallaxConfig={parallaxConfig.buffer2}
-          bgColor="bg-green-100"
+          parallaxConfig={parallaxConfig.buffer}
+          bgColor="bg-neutral-300"
+        />
+        <Projects parallaxConfig={parallaxConfig.projects} />
+        <Buffer
+          parallaxConfig={parallaxConfig.buffer}
+          bgColor="bg-neutral-200"
         />
         <Projects parallaxConfig={parallaxConfig.projects} />
 
+
         {/* Add content to make page scrollable */}
-        <div className="h-screen bg-gray-300 flex items-center justify-center">
+        <div className="h-screen bg-[#9be0c5] flex items-center justify-center">
           <h2 className="text-3xl">Section 4</h2>
         </div>
       </div>

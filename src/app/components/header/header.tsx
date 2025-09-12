@@ -32,7 +32,7 @@ export default function Header() {
   const opacity = isClient ? Math.max(0, Math.min(1, scrollProgress * 2)) : 0; // Fade in as displayText goes behind header
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 md:h-30 min-h-[8rem] flex justify-between items-center bg-[#76a7bc] flex-col md:flex-row py-4 md:py-0">
+    <header className="fixed top-0 left-0 right-0 z-50 md:h-30 min-h-[8rem] flex justify-between items-center bg-[#3bc493] flex-col md:flex-row py-4 md:py-0">
       <Logo />
       <p
         className="md:text-6xl hidden md:flex font-bold "
