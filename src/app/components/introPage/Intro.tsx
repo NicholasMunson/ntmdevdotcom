@@ -27,7 +27,7 @@ export default function Intro({ parallaxConfig }: IntroProps) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center h-[calc(100vh-8rem)] bg-white"
+      className="flex flex-col items-center justify-center h-screen bg-white relative z-20 w-full"
       style={{ transform }}
     >
       <h1 className="text-4xl font-bold">

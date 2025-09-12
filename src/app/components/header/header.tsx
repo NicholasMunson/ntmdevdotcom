@@ -14,7 +14,7 @@ export default function Header({ parallaxConfig }: HeaderProps) {
   const { transform } = useParallax(parallaxConfig);
   return (
     <header
-      className="md:h-30 h-33 flex justify-between items-center bg-[#76a7bc] flex-col md:flex-row"
+      className="md:h-30 h-33 flex justify-between items-center bg-[#76a7bc] flex-col md:flex-row relative z-20 w-full"
       style={{ transform }}
     >
       <Logo />

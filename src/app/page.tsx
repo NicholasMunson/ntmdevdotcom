@@ -19,7 +19,7 @@ const parallaxConfig = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-[url('/binary.svg')] ">
+    <>
       <Header parallaxConfig={parallaxConfig.header} />
       <Intro parallaxConfig={parallaxConfig.intro} />
       <Buffer parallaxConfig={parallaxConfig.buffer1} bgColor="bg-red-100" />
@@ -31,6 +31,6 @@ export default function Home() {
       <div className="h-screen bg-gray-300 flex items-center justify-center">
         <h2 className="text-3xl">Section 4</h2>
       </div>
-    </div>
+    </>
   );
 }

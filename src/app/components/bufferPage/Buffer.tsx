@@ -17,7 +17,7 @@ export default function Buffer({
     <div
       className={`h-screen ${
         bgColor ? bgColor : "bg-gray-300"
-      } flex items-center justify-center`}
+      } flex items-center justify-center relative z-20 w-full`}
       style={{ transform }}
     ></div>
   );
