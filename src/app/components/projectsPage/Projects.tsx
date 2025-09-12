@@ -11,8 +11,30 @@ interface ProjectsProps {
 export default function Projects({ parallaxConfig }: ProjectsProps) {
   const { transform } = useParallax(parallaxConfig);
   return (
-    <div style={{ transform }} className="h-screen bg-[#9be0c5] flex items-center justify-center relative z-20 w-full">
-      <h1 className="text-4xl font-bold">Projects</h1>
-    </div>
+    <section id="projects" className="section relative z-20 w-full">
+      <div className="container w-full">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold">Projects</h2>
+          <p className="muted">Selected work demonstrating performance, accessibility, and polish.</p>
+        </div>
+
+        <div style={{ transform }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "UI System", desc: "Composable design system with tokens and theming.", link: "#" },
+            { title: "Realtime Dashboard", desc: "WebSockets, charts, and virtualization.", link: "#" },
+            { title: "E2E Testing", desc: "Playwright-driven CI with visual diffs.", link: "#" },
+            { title: "Perf Audit", desc: "Lighthouse 95+ by code-splitting and memoization.", link: "#" },
+            { title: "Animations", desc: "Micro-interactions with accessible motion.", link: "#" },
+            { title: "Docs Site", desc: "Content-layer + MDX with search.", link: "#" },
+          ].map((p) => (
+            <a key={p.title} href={p.link} className="group surface rounded-xl p-5 hover:shadow-md transition-all border border-white/10">
+              <div className="h-36 rounded-lg mb-4 brand-gradient opacity-70 group-hover:opacity-90 transition-opacity" />
+              <h3 className="text-xl font-semibold mb-1">{p.title}</h3>
+              <p className="text-sm muted">{p.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }

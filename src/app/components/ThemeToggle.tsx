@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Check for saved theme preference or default to system preference
@@ -11,22 +11,25 @@ export default function ThemeToggle() {
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
-
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    }
+    const hasClass = document.documentElement.classList.contains("dark");
+    const initial = savedTheme
+      ? savedTheme === "dark"
+      : hasClass || prefersDark;
+    setIsDark(initial);
+    const el = document.documentElement;
+    if (initial) el.classList.add("dark");
+    else el.classList.remove("dark");
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-
-    if (newTheme) {
-      document.documentElement.classList.add("dark");
+    const next = !(isDark ?? false);
+    setIsDark(next);
+    const el = document.documentElement;
+    if (next) {
+      el.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      el.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
   };
@@ -34,8 +37,9 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+      className="fixed top-4 right-4 z-[60] p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
       aria-label="Toggle theme"
+      aria-pressed={!!isDark}
     >
       {isDark ? "☀️" : "🌙"}
     </button>

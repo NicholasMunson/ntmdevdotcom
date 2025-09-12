@@ -6,7 +6,7 @@ export const colors = {
     100: "#9be0c5", // Light green
     200: "#6ed3b8", // Medium light green
     300: "#3bc493", // Medium green
-    400: "#009f6h", // Dark green (assuming this is #009f6b)
+    400: "#009f6b", // Dark green (corrected)
     500: "#005c47", // Darkest green
     600: "#004a3a",
     700: "#00382d",

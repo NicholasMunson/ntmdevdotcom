@@ -5,11 +5,11 @@ export default function Logo() {
   return (
     <>
       <Image
-        src="/n.svg"
+        src="/N.svg"
         alt="Logo"
-        width={250}
-        height={100}
-        className="hover:animate-spin transition-transform duration-100 md:mb-3 md:ml-[-40px] pb[-10px]"
+        width={180}
+        height={72}
+        className="transition-transform duration-300 hover:scale-105 active:scale-95 select-none"
       />
     </>
   );
