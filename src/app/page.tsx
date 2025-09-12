@@ -20,16 +20,21 @@ const parallaxConfig = {
 export default function Home() {
   return (
     <>
-      <Header parallaxConfig={parallaxConfig.header} />
-      <Intro parallaxConfig={parallaxConfig.intro} />
-      <Buffer parallaxConfig={parallaxConfig.buffer1} bgColor="bg-red-100" />
-      <Technolgies parallaxConfig={parallaxConfig.technologies} />
-      <Buffer parallaxConfig={parallaxConfig.buffer2} bgColor="bg-green-100" />
-      <Projects parallaxConfig={parallaxConfig.projects} />
+      <Header />
+      <div className="pt-32 md:pt-30">
+        <Intro parallaxConfig={parallaxConfig.intro} />
+        <Buffer parallaxConfig={parallaxConfig.buffer1} bgColor="bg-red-100" />
+        <Technolgies parallaxConfig={parallaxConfig.technologies} />
+        <Buffer
+          parallaxConfig={parallaxConfig.buffer2}
+          bgColor="bg-green-100"
+        />
+        <Projects parallaxConfig={parallaxConfig.projects} />
 
-      {/* Add content to make page scrollable */}
-      <div className="h-screen bg-gray-300 flex items-center justify-center">
-        <h2 className="text-3xl">Section 4</h2>
+        {/* Add content to make page scrollable */}
+        <div className="h-screen bg-gray-300 flex items-center justify-center">
+          <h2 className="text-3xl">Section 4</h2>
+        </div>
       </div>
     </>
   );
