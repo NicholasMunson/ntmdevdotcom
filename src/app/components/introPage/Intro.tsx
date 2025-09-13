@@ -1,7 +1,6 @@
 "use client";
 import { useParallax } from "../../hooks/useParallax";
 import { useTypingEffect } from "../../hooks/useTypingEffect";
-import Image from "next/image";
 
 interface IntroProps {
   parallaxConfig: {
@@ -17,7 +16,7 @@ export default function Intro({ parallaxConfig }: IntroProps) {
     "Product-focused Frontend Engineer",
     // "Problem Solver, Builder, and Leader",
     // "I build digital solutions that matter",
-    // "Let's build something together!",
+    "Let's build something together!",
   ];
 
   const { displayText } = useTypingEffect({
@@ -57,16 +56,6 @@ export default function Intro({ parallaxConfig }: IntroProps) {
             Tech I Use
           </a>
         </div>
-        {/* <div className="flex flex-col items-center absolute bottom-8">
-          <p className="text-sm muted mb-2">Scroll to explore</p>
-          <Image
-            src="/arrow-down.svg"
-            alt="Scroll down"
-            width={40}
-            height={40}
-            className="animate-bounce opacity-70"
-          />
-        </div> */}
       </div>
     </section>
   );

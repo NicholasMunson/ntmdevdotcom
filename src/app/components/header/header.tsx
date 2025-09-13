@@ -34,15 +34,17 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-24 flex items-center border-b border-white/10 bg-[var(--color-surface)]">
-      <div className="container flex items-center justify-between gap-6">
-        <Logo />
+      <div className="container grid grid-cols-3 items-center">
+        <div className="justify-self-start">
+          <Logo />
+        </div>
         <p
-          className="hidden md:block text-3xl font-extrabold tracking-tight text-gradient"
+          className="hidden md:block text-3xl font-extrabold tracking-tight text-gradient justify-self-center text-center col-start-2"
           style={{ opacity }}
         >
           Nicholas T Munson
         </p>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 justify-self-end">
           <Links />
           <ThemeToggle />
         </div>

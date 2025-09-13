@@ -1,5 +1,6 @@
 "use client";
 import { useParallax } from "../../hooks/useParallax";
+import Section from "../Section";
 
 interface ProjectsProps {
   parallaxConfig: {
@@ -11,14 +12,13 @@ interface ProjectsProps {
 export default function Projects({ parallaxConfig }: ProjectsProps) {
   const { transform } = useParallax(parallaxConfig);
   return (
-    <section id="projects" className="section relative z-20 w-full">
-      <div className="container w-full">
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold">Projects</h2>
-          <p className="muted">Selected work demonstrating performance, accessibility, and polish.</p>
-        </div>
+    <Section id="projects" overlay containerClassName="w-full">
+      <div className="mb-8 text-center">
+        <h2 className="text-3xl font-bold">Projects</h2>
+        <p className="muted">Selected work demonstrating performance, accessibility, and polish.</p>
+      </div>
 
-        <div style={{ transform }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div style={{ transform }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             { title: "UI System", desc: "Composable design system with tokens and theming.", link: "#" },
             { title: "Realtime Dashboard", desc: "WebSockets, charts, and virtualization.", link: "#" },
@@ -33,8 +33,7 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
               <p className="text-sm muted">{p.desc}</p>
             </a>
           ))}
-        </div>
       </div>
-    </section>
+    </Section>
   )
 }
