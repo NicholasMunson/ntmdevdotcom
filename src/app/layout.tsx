@@ -1,6 +1,6 @@
 import "./globals.css";
-import ThemeToggle from "./components/ThemeToggle";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "./providers/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -10,10 +10,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`${inter.className} antialiased flex-1`}>
-        <ThemeToggle />
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

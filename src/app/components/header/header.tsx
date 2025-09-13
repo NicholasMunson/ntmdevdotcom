@@ -1,6 +1,7 @@
 "use client";
 import Logo from "./Logo";
 import Links from "./Links";
+import ThemeToggle from "./ThemeToggle";
 import { useState, useEffect } from "react";
 
 export default function Header() {
@@ -41,7 +42,10 @@ export default function Header() {
         >
           Nicholas T Munson
         </p>
-        <Links />
+        <div className="flex items-center gap-3">
+          <Links />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
