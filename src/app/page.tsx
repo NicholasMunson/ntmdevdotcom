@@ -1,9 +1,9 @@
 // import Image from "next/image";
-import Header from "./components/header/Header";
-import Technolgies from "./components/technolgyPage/Technolgies";
-import Intro from "./components/introPage/Intro";
-import Projects from "./components/projectsPage/Projects";
-import Footer from "./components/footerPage/Footer";
+import Header from "./views/header/Header";
+import Technolgies from "./views/technolgyPage/Technolgies";
+import Intro from "./views/introPage/Intro";
+import Projects from "./views/projectsPage/Projects";
+import Footer from "./views/footerPage/Footer";
 
 // Parallax configuration - speeds are complementary to prevent gaps
 const parallaxConfig = {
