@@ -7,7 +7,7 @@ export default function Footer() {
     ? "hover:text-white hover:bg-white/10"
     : "hover:text-black hover:bg-black/5";
   return (
-    <footer className="border-t border-white/10">
+    <footer className="border-t border-white/10 px-20">
       <div className="container py-10 flex items-center justify-between">
         <p className="text-sm muted">
           © {new Date().getFullYear()} Nicholas T Munson

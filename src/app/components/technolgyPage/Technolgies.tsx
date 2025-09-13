@@ -21,7 +21,7 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
     >
       <h2 className="text-3xl font-bold">Technologies</h2>
 
-      <div className="flex flex-col gap-8 w-full px-20">
+      <div className="flex flex-col gap-8 w-full">
         <section>
           <h3 className="text-xl font-semibold mb-3">Frontend tooling</h3>
           <ul className="grid grid-cols-2 gap-3">
@@ -85,7 +85,7 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
             {[
               "GitHub",
               "Linear",
-              "Jira",
+              "Agile/Scrum",
               "Figma",
               "Notion",
               "Trello",
