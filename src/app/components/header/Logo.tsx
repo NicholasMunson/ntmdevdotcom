@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
 
+
 export default function Logo() {
+  const src = "/N.svg";
   return (
     <>
       <Image
-        src="/N.svg"
+        src={src}
         alt="Logo"
         width={180}
         height={72}

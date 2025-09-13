@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 128">
+  <defs>
+    <!-- Horizontal gradient: left (#6FD0B4) → middle (#3BBD9C) → right (#38BDF8) -->
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="512" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6FD0B4"/>
+      <stop offset="55%" stop-color="#3BBD9C"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Replace these with your actual paths/shapes -->
+  <g fill="url(#logoGradient)">
+    <path d="M50 20 L90 100 L10 100 Z"/>
+    <!-- more paths here -->
+  </g>
+</svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="600"
+  height="120"
+  viewBox="0 0 600 120"
+>
+  <defs>
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="512" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0"   stop-color="#6FD0B4"/>
+      <stop offset="55%" stop-color="#3BBD9C"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <text
+    x="20"
+    y="80"
+    font-size="60"
+    font-weight="bold"
+    fill="url(#logoGradient)"
+  >
+    Nicholas T Munson
+  </text>
+</svg>

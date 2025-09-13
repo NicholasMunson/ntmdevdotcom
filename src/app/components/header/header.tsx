@@ -33,7 +33,7 @@ export default function Header() {
   const opacity = isClient ? Math.max(0, Math.min(1, scrollProgress * 2)) : 0; // Fade in as displayText goes behind header
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-24 flex items-center border-b border-white/10 glass">
+    <header className="fixed top-0 left-0 right-0 z-50 h-24 flex items-center border-b border-white/10 bg-[var(--color-surface)]">
       <div className="container flex items-center justify-between gap-6">
         <Logo />
         <p
