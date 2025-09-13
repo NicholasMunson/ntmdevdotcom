@@ -29,7 +29,7 @@ export default function Intro({ parallaxConfig }: IntroProps) {
   return (
     <section
       id="intro"
-      className="section relative overflow-hidden"
+      className="section relative overflow-hidden  items-center"
       style={{ transform }}
     >
       <div className="absolute inset-0 brand-gradient opacity-[0.08]" />

@@ -22,7 +22,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`section relative overflow-hidden ${className}`}
+      className={`section relative overflow-hidden py-8 ${className}`}
       style={style}
     >
       {overlay && (
