@@ -11,7 +11,7 @@ export default function ListSection({ title, items }: ListSectionProps) {
         {items.map((item) => (
           <li
             key={item}
-            className="surface rounded-lg px-4 py-2 text-sm text-center hover:shadow-md transition-shadow"
+            className="px-2 py-1 text-xs rounded-md border border-white/10 bg-white/5 text-center"
           >
             {item}
           </li>

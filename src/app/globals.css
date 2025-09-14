@@ -137,3 +137,8 @@ p {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
+
+/* Timeline spacing normalization */
+.timeline .vertical-timeline-element-content p {
+  margin: 0; /* let component-level mt-* control spacing */
+}
