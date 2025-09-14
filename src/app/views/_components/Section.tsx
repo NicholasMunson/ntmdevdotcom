@@ -8,6 +8,8 @@ interface SectionProps {
   overlay?: boolean;
   overlayClassName?: string;
   containerClassName?: string;
+  title?: string;
+  subtitle?: string;
 }
 
 export default function Section({
@@ -18,6 +20,8 @@ export default function Section({
   overlay = false,
   overlayClassName = "",
   containerClassName = "",
+  title,
+  subtitle,
 }: SectionProps) {
   return (
     <section
@@ -31,6 +35,12 @@ export default function Section({
         />
       )}
       <div className={`container relative z-10 ${containerClassName}`}>
+        {(title || subtitle) && (
+          <div className="mb-8 text-center">
+            {title && <h2 className="text-3xl font-bold">{title}</h2>}
+            {subtitle && <p className="muted">{subtitle}</p>}
+          </div>
+        )}
         {children}
       </div>
     </section>

@@ -4,6 +4,7 @@ import Technolgies from "./views/technolgyPage/Technolgies";
 import Intro from "./views/introPage/Intro";
 import Projects from "./views/projectsPage/Projects";
 import Footer from "./views/footerPage/Footer";
+import Timeline from "./views/timelinePage/Timeline";
 
 // Parallax configuration - speeds are complementary to prevent gaps
 const parallaxConfig = {
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <div className="pt-24 flex flex-col">
         <Intro parallaxConfig={parallaxConfig.intro} />
+        <Timeline />
         <Technolgies parallaxConfig={parallaxConfig.technologies} />
         <Projects parallaxConfig={parallaxConfig.projects} />
         <Footer />
