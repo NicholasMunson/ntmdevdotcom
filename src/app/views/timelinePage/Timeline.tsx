@@ -7,6 +7,8 @@ import Section from "../_components/Section";
 import { useTheme } from "../../providers/ThemeProvider";
 
 export default function Timeline() {
+  const { isDark } = useTheme();
+  const lineColor = isDark ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.2)";
   return (
     <Section
       id="timeline"
@@ -18,7 +20,7 @@ export default function Timeline() {
         <VerticalTimeline
           className="timeline"
           layout="2-columns"
-          lineColor="rgba(255,255,255,0.15)"
+          lineColor={lineColor}
         >
           <VerticalTimelineElement
             date="Mar 2023 — Aug 2025 (2 years 3 months)"
@@ -137,7 +139,7 @@ function RoleDetails({ title, subtitle, overview, techs }: RoleDetailsProps) {
   const { isDark } = useTheme();
   const pillClass = isDark
     ? "px-2 py-1 text-xs rounded-md border border-white/10 bg-white/5"
-    : "px-2 py-1 text-xs rounded-md border border-black/10 bg-black/5";
+    : "px-2 py-1 text-xs rounded-md border border-black/10 bg-black/5 text-center";
   return (
     <div className="space-y-3">
       {(title || subtitle) && (
