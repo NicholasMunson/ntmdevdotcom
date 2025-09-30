@@ -62,7 +62,7 @@ export default function Timeline() {
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
-            date="2021 — 2023"
+            date="March 2022 — August 2023 (1 year 6 months)"
             position="left"
             contentStyle={{
               background: "var(--color-surface)",
@@ -76,24 +76,26 @@ export default function Timeline() {
             iconStyle={{ background: "var(--brand-400)", color: "#fff" }}
           >
             <RoleDetails
-              title="Software Engineer"
-              subtitle="Company"
-              overview="Built features end‑to‑end, added tests, and optimized bundle size."
+              title="Lead Software Engineer"
+              subtitle="Clean Earth Rovers"
+              overview="Spearheaded end-to-end development of environmental monitoring software. Built a secure Node.js/Express API with Google Cloud integrations and designed a React front-end from scratch, delivering pixel-perfect Figma implementations and real-time water data dashboards. Created 50+ reusable components to accelerate future development and ensure a consistent, scalable UI system."
               techs={[
-                "TypeScript",
+                "Node.js",
+                "Express",
+                "Google Cloud Platform (GCP)",
                 "React",
-                "CSS Modules",
-                "React Hook Form",
-                "Radix UI",
-                "Ruby on Rails",
-                "Alpine.js",
-                "Tailwind CSS",
+                "Figma",
+                "JavaScript",
+                "Reusable Component Libraries",
+                "Data Visualization/Dashboards",
+                "Secure Authentication & Login Flows",
+                "REST API Development",
               ]}
             />
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
-            date="2019 — 2021"
+            date="Jan 2019 — Jan 2022 (3 years 1 month)"
             position="right"
             contentStyle={{
               background: "var(--color-surface)",
@@ -107,18 +109,81 @@ export default function Timeline() {
             iconStyle={{ background: "var(--brand-300)", color: "#053a32" }}
           >
             <RoleDetails
-              title="Engineering Intern"
-              subtitle="Company"
-              overview="Assisted with component library and accessibility fixes."
+              title="Software Engineer / Application Manager"
+              subtitle="Intelivideo • Broomfield, Colorado"
+              overview="As a software engineer, I found software solutions to issues and slowdowns in our internal application build process. Built clean User Interfaces for our Client Success Management team to add client metadata to our database. Integrated automation tools to further automate our processes for efficiency. As an Application Manager, I was responsible for configuration, testing, and deployment of all new client applications, as well as maintaining and updating 180+ Intelivideo client TV and mobile applications. Cut iOS testing and deployment time in half through process improvements."
               techs={[
-                "TypeScript",
+                "JavaScript",
                 "React",
-                "CSS Modules",
-                "React Hook Form",
-                "Radix UI",
-                "Ruby on Rails",
-                "Alpine.js",
-                "Tailwind CSS",
+                "iOS",
+                "Mobile Development",
+                "Automation",
+                "Database Management",
+                "Client Success",
+                "Process Improvement",
+                "Testing",
+                "Deployment",
+              ]}
+            />
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            date="May 2018 — Jun 2018 (2 months)"
+            position="left"
+            contentStyle={{
+              background: "var(--color-surface)",
+              color: "var(--color-text)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "var(--shadow-sm)",
+            }}
+            contentArrowStyle={{
+              borderRight: "7px solid rgba(255,255,255,0.1)",
+            }}
+            iconStyle={{ background: "var(--brand-300)", color: "#053a32" }}
+          >
+            <RoleDetails
+              title="Software Developer Internship"
+              subtitle="dialect.ai • Greater Denver Area"
+              overview="Used agile workflow methods to help develop the platform's landing page. The landing page was built in React and used Material UI."
+              techs={[
+                "React",
+                "Material UI",
+                "Agile",
+                "JavaScript",
+                "HTML",
+                "CSS",
+              ]}
+            />
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            date="2018"
+            position="right"
+            contentStyle={{
+              background: "var(--color-surface)",
+              color: "var(--color-text)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "var(--shadow-sm)",
+            }}
+            contentArrowStyle={{
+              borderRight: "7px solid rgba(255,255,255,0.1)",
+            }}
+            iconStyle={{ background: "var(--brand-400)", color: "#fff" }}
+          >
+            <RoleDetails
+              title="Full-Stack Web Development"
+              subtitle="Galvanize Inc"
+              overview="Six month immersive web development course with exposure to the full JavaScript stack. Emphasis on agile and paired programming that reflect a real world development environment. With over 800 plus hours of industry training, this program has prepared me for the challenges ahead."
+              techs={[
+                "JavaScript",
+                "Node.js",
+                "React",
+                "Vue.js",
+                "PostgreSQL",
+                "Agile",
+                "Pair Programming",
+                "HTML",
+                "CSS",
+                "Git",
               ]}
             />
           </VerticalTimelineElement>
