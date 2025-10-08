@@ -71,14 +71,43 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
       }
     },
     {
-      title: "Realtime Dashboard",
-      desc: "WebSockets, charts, and virtualization.",
-      githubFrontend: "https://github.com/yourusername/realtime-dashboard",
+      title: "Urban Canvas",
+      desc: "A collaborative group project where each team member contributed to all aspects of the full-stack application.",
+      image: "/urbanCanvus.png",
+      githubFrontend: "https://github.com/NicholasMunson/UrbanCanvas",
+      githubBackend: "https://github.com/Pleeper228/urban-canvas-server",
       detailedInfo: {
-        description: "A real-time data visualization dashboard built with modern web technologies.",
-        technologies: ["React", "WebSockets", "Chart.js", "Virtualization"],
-        features: ["Real-time Updates", "Interactive Charts", "Data Virtualization"],
-        challenges: ["WebSocket Management", "Performance Optimization", "Data Visualization"]
+        description: "A collaborative full-stack group project where each team member contributed to all aspects of the application including frontend, backend, database design, and deployment. This project demonstrates strong teamwork, code collaboration, and full-stack development skills across the entire technology stack.",
+        technologies: [
+          "JavaScript",
+          "Node.js",
+          "Express",
+          "Database Design",
+          "API Development",
+          "Frontend Development",
+          "Git Collaboration",
+          "Group Project Management"
+        ],
+        features: [
+          "Full-Stack Development",
+          "Team Collaboration",
+          "Database Integration",
+          "API Design",
+          "Frontend-Backend Communication",
+          "Version Control",
+          "Code Review Process",
+          "Project Planning"
+        ],
+        challenges: [
+          "Team Coordination",
+          "Code Merge Conflicts",
+          "Feature Integration",
+          "Database Schema Design",
+          "API Endpoint Planning",
+          "Git Workflow Management",
+          "Cross-Team Communication",
+          "Project Timeline Management"
+        ]
       }
     },
     {
