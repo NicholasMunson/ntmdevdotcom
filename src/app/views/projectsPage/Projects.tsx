@@ -110,50 +110,50 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
         ]
       }
     },
-    {
-      title: "E2E Testing",
-      desc: "Playwright-driven CI with visual diffs.",
-      githubFrontend: "https://github.com/yourusername/e2e-testing-suite",
-      detailedInfo: {
-        description: "Comprehensive end-to-end testing suite with visual regression testing capabilities.",
-        technologies: ["Playwright", "CI/CD", "Visual Testing"],
-        features: ["Automated Testing", "Visual Diffs", "CI Integration"],
-        challenges: ["Test Stability", "Visual Regression Detection", "CI Performance"]
-      }
-    },
-    {
-      title: "Perf Audit",
-      desc: "Lighthouse 95+ by code-splitting and memoization.",
-      githubFrontend: "https://github.com/yourusername/performance-audit",
-      detailedInfo: {
-        description: "Performance optimization project achieving 95+ Lighthouse scores through advanced techniques.",
-        technologies: ["React", "Code Splitting", "Memoization", "Lighthouse"],
-        features: ["Code Splitting", "Memoization", "Bundle Optimization"],
-        challenges: ["Bundle Size Reduction", "Runtime Performance", "Lighthouse Optimization"]
-      }
-    },
-    {
-      title: "Animations",
-      desc: "Micro-interactions with accessible motion.",
-      githubFrontend: "https://github.com/yourusername/accessible-animations",
-      detailedInfo: {
-        description: "Accessible animation library focusing on micro-interactions and motion design.",
-        technologies: ["CSS Animations", "Framer Motion", "Accessibility"],
-        features: ["Micro-interactions", "Accessible Motion", "Custom Animations"],
-        challenges: ["Accessibility Compliance", "Performance", "Cross-browser Support"]
-      }
-    },
-    {
-      title: "Docs Site",
-      desc: "Content-layer + MDX with search.",
-      githubFrontend: "https://github.com/yourusername/docs-site",
-      detailedInfo: {
-        description: "Documentation site built with modern content management and search capabilities.",
-        technologies: ["Next.js", "MDX", "Content Layer", "Search"],
-        features: ["MDX Support", "Full-text Search", "Content Management"],
-        challenges: ["Search Implementation", "Content Processing", "Performance"]
-      }
-    }
+    // {
+    //   title: "E2E Testing",
+    //   desc: "Playwright-driven CI with visual diffs.",
+    //   githubFrontend: "https://github.com/yourusername/e2e-testing-suite",
+    //   detailedInfo: {
+    //     description: "Comprehensive end-to-end testing suite with visual regression testing capabilities.",
+    //     technologies: ["Playwright", "CI/CD", "Visual Testing"],
+    //     features: ["Automated Testing", "Visual Diffs", "CI Integration"],
+    //     challenges: ["Test Stability", "Visual Regression Detection", "CI Performance"]
+    //   }
+    // },
+    // {
+    //   title: "Perf Audit",
+    //   desc: "Lighthouse 95+ by code-splitting and memoization.",
+    //   githubFrontend: "https://github.com/yourusername/performance-audit",
+    //   detailedInfo: {
+    //     description: "Performance optimization project achieving 95+ Lighthouse scores through advanced techniques.",
+    //     technologies: ["React", "Code Splitting", "Memoization", "Lighthouse"],
+    //     features: ["Code Splitting", "Memoization", "Bundle Optimization"],
+    //     challenges: ["Bundle Size Reduction", "Runtime Performance", "Lighthouse Optimization"]
+    //   }
+    // },
+    // {
+    //   title: "Animations",
+    //   desc: "Micro-interactions with accessible motion.",
+    //   githubFrontend: "https://github.com/yourusername/accessible-animations",
+    //   detailedInfo: {
+    //     description: "Accessible animation library focusing on micro-interactions and motion design.",
+    //     technologies: ["CSS Animations", "Framer Motion", "Accessibility"],
+    //     features: ["Micro-interactions", "Accessible Motion", "Custom Animations"],
+    //     challenges: ["Accessibility Compliance", "Performance", "Cross-browser Support"]
+    //   }
+    // },
+    // {
+    //   title: "Docs Site",
+    //   desc: "Content-layer + MDX with search.",
+    //   githubFrontend: "https://github.com/yourusername/docs-site",
+    //   detailedInfo: {
+    //     description: "Documentation site built with modern content management and search capabilities.",
+    //     technologies: ["Next.js", "MDX", "Content Layer", "Search"],
+    //     features: ["MDX Support", "Full-text Search", "Content Management"],
+    //     challenges: ["Search Implementation", "Content Processing", "Performance"]
+    //   }
+    // }
   ];
 
   return (
