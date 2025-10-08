@@ -26,7 +26,8 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
       githubFrontend: "https://github.com/NicholasMunson/my-bevs",
       githubBackend: "https://github.com/NicholasMunson/my-bevs-node-backend",
       detailedInfo: {
-        description: "A comprehensive full-stack beverage collection management system built as a Progressive Web App. The application allows users to catalog, rate, and track their beer and wine collections with a mobile-first design optimized for touch interactions. Features a RESTful API backend with full CRUD operations, database migrations, and comprehensive error handling. The PWA provides offline functionality and seamless data synchronization between frontend and backend services.",
+        description:
+          "A comprehensive full-stack beverage collection management system built as a Progressive Web App. The application allows users to catalog, rate, and track their beer and wine collections with a mobile-first design optimized for touch interactions. Features a RESTful API backend with full CRUD operations, database migrations, and comprehensive error handling. The PWA provides offline functionality and seamless data synchronization between frontend and backend services.",
         technologies: [
           "React 18",
           "React Router",
@@ -42,7 +43,7 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
           "PWA",
           "Firebase Hosting",
           "Render.com",
-          "Cypress Testing"
+          "Cypress Testing",
         ],
         features: [
           "Full CRUD Operations",
@@ -56,7 +57,7 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
           "Error Handling",
           "CORS Integration",
           "Responsive UI",
-          "PWA Installation"
+          "PWA Installation",
         ],
         challenges: [
           "PWA Implementation & Offline Sync",
@@ -66,9 +67,9 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
           "Cross-Origin Resource Sharing",
           "Environment Configuration",
           "Deployment Pipeline Setup",
-          "Data Validation & Security"
-        ]
-      }
+          "Data Validation & Security",
+        ],
+      },
     },
     {
       title: "Urban Canvas",
@@ -77,7 +78,8 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
       githubFrontend: "https://github.com/NicholasMunson/UrbanCanvas",
       githubBackend: "https://github.com/Pleeper228/urban-canvas-server",
       detailedInfo: {
-        description: "A collaborative full-stack group project where each team member contributed to all aspects of the application including frontend, backend, database design, and deployment. This project demonstrates strong teamwork, code collaboration, and full-stack development skills across the entire technology stack.",
+        description:
+          "A collaborative full-stack group project where each team member contributed to all aspects of the application including frontend, backend, database design, and deployment. This project demonstrates strong teamwork, code collaboration, and full-stack development skills across the entire technology stack.",
         technologies: [
           "JavaScript",
           "Node.js",
@@ -86,7 +88,7 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
           "API Development",
           "Frontend Development",
           "Git Collaboration",
-          "Group Project Management"
+          "Group Project Management",
         ],
         features: [
           "Full-Stack Development",
@@ -96,7 +98,7 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
           "Frontend-Backend Communication",
           "Version Control",
           "Code Review Process",
-          "Project Planning"
+          "Project Planning",
         ],
         challenges: [
           "Team Coordination",
@@ -106,9 +108,9 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
           "API Endpoint Planning",
           "Git Workflow Management",
           "Cross-Team Communication",
-          "Project Timeline Management"
-        ]
-      }
+          "Project Timeline Management",
+        ],
+      },
     },
     // {
     //   title: "E2E Testing",
@@ -166,7 +168,15 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
     >
       <div
         style={{ transform }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className={`grid gap-6 justify-items-center ${
+          projects.length === 1
+            ? "grid-cols-1"
+            : projects.length === 2
+            ? "grid-cols-1 sm:grid-cols-2"
+            : projects.length === 3
+            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        }`}
       >
         {projects.map((project) => (
           <ProjectCard
