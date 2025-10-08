@@ -21,6 +21,7 @@ export default function Timeline() {
           className="timeline"
           layout="2-columns"
           lineColor={lineColor}
+          animate={true}
         >
           <VerticalTimelineElement
             date="Mar 2023 — Aug 2025 (2 years 3 months)"
