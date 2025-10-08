@@ -1,5 +1,6 @@
 "use client";
 import { Project } from "./types";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,7 +13,18 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="group surface rounded-xl p-5 hover:shadow-md transition-all border border-white/10 flex flex-col">
-      <div className="h-36 rounded-lg mb-4 brand-gradient opacity-70 group-hover:opacity-90 transition-opacity" />
+      <div className="h-36 rounded-lg mb-4 overflow-hidden relative">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="w-full h-full brand-gradient opacity-70 group-hover:opacity-90 transition-opacity" />
+        )}
+      </div>
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
       <p className="text-sm muted mb-4 flex-grow">{project.desc}</p>
 

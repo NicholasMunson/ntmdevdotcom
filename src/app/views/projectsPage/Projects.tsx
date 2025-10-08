@@ -21,6 +21,7 @@ export default function Projects({ parallaxConfig }: ProjectsProps) {
     {
       title: "My Bevs",
       desc: "A Full Stack Progressive Web App for tracking beer and wine collections.",
+      image: "/myBevs.png",
       websiteUrl: "https://my-bevs.web.app/",
       githubFrontend: "https://github.com/NicholasMunson/my-bevs",
       githubBackend: "https://github.com/NicholasMunson/my-bevs-node-backend",
