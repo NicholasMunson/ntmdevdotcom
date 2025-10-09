@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
 import { Button } from "../../components/ui";
 import { useTheme } from "../../providers/ThemeProvider";
+import ThemeToggle from "../../views/header/ThemeToggle";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -45,7 +45,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-semibold">Navigation</h2>
+            <h2 className="text-xl font-semibold">Resource links and settings</h2>
             <Button variant="ghost" size="sm" onClick={onClose} className="p-2">
               <svg
                 className="w-5 h-5"
@@ -62,6 +62,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </svg>
             </Button>
           </div>
+
 
           {/* Menu items */}
           <nav className="space-y-4">
@@ -82,6 +83,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </a>
             ))}
           </nav>
+          {/* Theme Toggle */}
+          <div className="mb-6">
+            <div className="flex items-center justify-between px-4 py-3 rounded-lg bg-white/5">
+              <span className={`text-sm font-medium ${isDark ? "text-white/80" : "text-black/80"}`}>Theme</span>
+              <ThemeToggle />
+            </div>
+          </div>
         </div>
       </div>
     </>
