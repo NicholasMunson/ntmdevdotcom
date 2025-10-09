@@ -13,7 +13,7 @@ export default function Intro({ parallaxConfig }: IntroProps) {
   const { transform } = useParallax(parallaxConfig);
   const texts = [
     "Hi, I'm Nicholas T Munson",
-    "Product-focused Frontend Engineer",
+    "Product-focused Full Stack Engineer",
     // "Problem Solver, Builder, and Leader",
     // "I build digital solutions that matter",
     "Let's build something together!",
@@ -29,12 +29,12 @@ export default function Intro({ parallaxConfig }: IntroProps) {
   return (
     <section
       id="intro"
-      className="section relative overflow-hidden  items-center"
+      className="section relative overflow-hidden  md:items-center pt-20 md:pt-0"
       style={{ transform }}
     >
       <div className="absolute inset-0 brand-gradient opacity-[0.08]" />
-      <div className="container relative z-10 flex flex-col items-center text-center gap-6">
-        <h1 className="font-extrabold text-gradient">
+      <div className="container relative z-10 flex flex-col items-center text-center gap-6 md:px-0 px-2">
+        <h1 className="font-extrabold text-gradient md:mb-0 h-[160px]">
           {displayText}
           <span className="animate-pulse">|</span>
         </h1>
@@ -42,10 +42,16 @@ export default function Intro({ parallaxConfig }: IntroProps) {
           I design and ship performant, accessible web experiences with React,
           TypeScript, and delightful UX details.
         </p>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 md:flex-row flex-col">
+          <a
+            href="#timeline"
+            className="px-5 py-3 rounded-lg bg-[var(--brand-500)] text-white hover:bg-[var(--brand-600)] transition-colors shadow-md"
+          >
+            View Experience
+          </a>
           <a
             href="#projects"
-            className="px-5 py-3 rounded-lg bg-[var(--brand-500)] text-white hover:bg-[var(--brand-600)] transition-colors shadow-md"
+            className="px-5 py-3 rounded-lg border border-white/15 hover:bg-white/5 transition-colors"
           >
             View Projects
           </a>

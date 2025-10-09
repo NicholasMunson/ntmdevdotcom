@@ -29,8 +29,9 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
             "HTML/CSS",
             "JavaScript",
             "TypeScript",
-            "React",
+            "React.js",
             "Next.js",
+            "Vue.js",
             "TailwindCSS",
             "Redux",
             "Zustand",
@@ -38,8 +39,10 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
             "React Hook Form",
             "Shadcn/UI",
             "Alpine.js",
-            "ERB templates (Ruby on Rails)",
+            "ERB templates",
             "Storybook",
+            "SWR",
+            "Cypress",
           ]}
         />
         <ListSection
@@ -58,6 +61,7 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
             "GCP",
             "Firebase",
             "CircleCI",
+            "Render",
           ]}
         />
         <ListSection
@@ -74,6 +78,10 @@ export default function Technolgies({ parallaxConfig }: TechnolgiesProps) {
             "GitHub Actions",
             "Stripe",
           ]}
+        />
+        <ListSection
+          title="Currently digging deeper into..."
+          items={["RAG pipelines", "AI agents", "System design"]}
         />
       </div>
     </Section>
