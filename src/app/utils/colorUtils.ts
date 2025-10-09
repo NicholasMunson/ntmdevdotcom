@@ -1,13 +1,21 @@
 import { colors, colorSchemes } from "../config/colors";
 
+// Type for nested color objects
+interface ColorValue {
+  [key: string]: string | ColorValue;
+}
+
 // Utility functions for easy color usage
 export const getColor = (colorPath: string) => {
   const keys = colorPath.split(".");
-  let value: any = colors;
+  let value: ColorValue = colors;
 
   for (const key of keys) {
-    value = value[key];
-    if (value === undefined) return null;
+    if (typeof value === "object" && value !== null && key in value) {
+      value = (value as Record<string, ColorValue>)[key];
+    } else {
+      return null;
+    }
   }
 
   return value;
@@ -36,13 +44,13 @@ export const schemes = {
 
 // Your specific palette colors as constants
 export const palette = {
-  // Green/Teal palette
-  appleGreen: "#d9f1e8",
-  lightGreen: "#9be0c5",
-  mediumLightGreen: "#6ed3b8",
-  mediumGreen: "#3bc493",
-  darkGreen: "#009f6b",
-  darkestGreen: "#005c47",
+  // Green/Teal palette with numbered scale
+  50: "#d9f1e8",
+  100: "#9be0c5",
+  200: "#6ed3b8",
+  300: "#3bc493",
+  400: "#009f6b",
+  500: "#005c47",
 
   // Custom gray palette
   lightestGray: "#f5f5f5",
@@ -54,13 +62,13 @@ export const palette = {
 
 // Tailwind classes for your palette
 export const paletteClasses = {
-  // Green/Teal palette
-  appleGreen: "bg-[#d9f1e8]",
-  lightGreen: "bg-[#9be0c5]",
-  mediumLightGreen: "bg-[#6ed3b8]",
-  mediumGreen: "bg-[#3bc493]",
-  darkGreen: "bg-[#009f6b]",
-  darkestGreen: "bg-[#005c47]",
+  // Green/Teal palette with numbered scale
+  50: "bg-[#d9f1e8]",
+  100: "bg-[#9be0c5]",
+  200: "bg-[#6ed3b8]",
+  300: "bg-[#3bc493]",
+  400: "bg-[#009f6b]",
+  500: "bg-[#005c47]",
 
   // Custom gray palette
   lightestGray: "bg-[#f5f5f5]",
@@ -72,13 +80,13 @@ export const paletteClasses = {
 
 // Text color classes for your palette
 export const textPaletteClasses = {
-  // Green/Teal palette
-  appleGreen: "text-[#d9f1e8]",
-  lightGreen: "text-[#9be0c5]",
-  mediumLightGreen: "text-[#6ed3b8]",
-  mediumGreen: "text-[#3bc493]",
-  darkGreen: "text-[#009f6b]",
-  darkestGreen: "text-[#005c47]",
+  // Green/Teal palette with numbered scale
+  50: "text-[#d9f1e8]",
+  100: "text-[#9be0c5]",
+  200: "text-[#6ed3b8]",
+  300: "text-[#3bc493]",
+  400: "text-[#009f6b]",
+  500: "text-[#005c47]",
 
   // Custom gray palette
   lightestGray: "text-[#f5f5f5]",
